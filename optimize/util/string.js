@@ -1,0 +1,1 @@
+define([],function(){var e={};return e.format=function(){if(arguments.length==0)return null;var e=arguments[0];for(var t=1;t<arguments.length;t++){var n=new RegExp("\\{"+(t-1)+"\\}","gm");e=e.replace(n,arguments[t])}return e},e});

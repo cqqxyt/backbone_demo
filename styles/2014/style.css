@@ -1,0 +1,129 @@
+/*reset*/
+html {font-size: 100%;}
+body{line-height:1.4;color:#333;font-family:arial;font-size:1em;}
+input,textarea,select{font-size:100%;font-family:inherit;outline:0;}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form,dl,dt,dd,li{margin:0;}
+h4,h5,h6{font-size:1em;}
+ul,ol{padding-left:0; list-style-type:none;}
+img{border:0;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{ display:block;}
+
+/*common css*/
+.l{float:left;}.r{float:right;}.cl{clear:both;}
+.n{font-weight:normal; font-style:normal;}.b{font-weight:bold;}.i{font-style:italic;}
+.fa{font-family:Arial;}.fg{font-family:Georgia;}.ft{font-family:Tahoma;}.fl{font-family:Lucida Console;}.fs{font-family:'宋体';}.fw{font-family:'微软雅黑';}
+.tc{text-align:center;}.tr{text-align:right;}.tl{text-align:left;}
+.tdl{text-decoration:underline;}a.tdl:hover{text-decoration:none;}
+.tdn{text-decoration:none;}a.tdn:hover{text-decoration:underline;}
+.tdn2{text-decoration:none;}a.tdn2:hover{text-decoration:none;}
+.g0{color:#000000;}.g3{color:#333333;}.g6{color:#666666;}.g9{color:#999999;}.red{color:red;}.wh{color:white;}
+.f0{font-size:0;}.f10{font-size:10px;}.f11{font-size:11px;}.f12{font-size:12px;}.f13{font-size:13px;}.f14{font-size:14px;}.f15{font-size:15px;}.f16{font-size:16px;}.f18{font-size:18px;}.f20{font-size:20px;}.f24{font-size:24px;}.f25{font-size:25px;}
+.vm{vertical-align:middle;}.vtb{vertical-align:text-bottom;}.vt{vertical-align:top;}.vb{vertical-align:bottom;}.vn{vertical-align:-2px;}.vimg{margin-bottom:-3px;}
+.m0{margin:0;}.ml1{margin-left:1px;}.ml2{margin-left:2px;}.ml5{margin-left:5px;}.ml10{margin-left:10px;}.ml20{margin-left:20px;}.mr1{margin-right:1;}.mr2{margin-right:2px;}.mr5{margin-right:5px;}.mr10{margin-right:10px;}.mr20{margin-right:20px;}.mt1{margin-top:1;}.mt2{margin-top:2px;}.mt5{margin-top:5px;}.mt10{margin-top:10px;}.mt20{margin-top:20px;}.mb1{margin-bottom:1px;}.mb2{margin-bottom:2px;}.mb5{margin-bottom:5px;}.mb10{margin-bottom:10px;}.mb20{margin-bottom:20px;}.ml-1{margin-left:-1px;}.mt-1{margin-top:-1px;}
+.p1{padding:1px;}.pl1{padding-left:1px;}.pt1{padding-top:1px;}.pr1{padding-right:1px;}.pb1{padding-bottom:1px;}.p2{padding:2px;}.pl2{padding-left:2px;}.pt2{padding-top:2px;}.pr2{padding-right:2px;}.pb2{padding-bottom:2px;}.pl5{padding-left:5px;}.p5{padding:5px;}.pt5{padding-top:5px;}.pr5{padding-right:5px;}.pb5{padding-bottom:5px;}.p10{padding:10px;}.pl10{padding-left:10px;}.pt10{padding-top:10px;}.pr10{padding-right:10px;}.pb10{padding-bottom:10px;}.p20{padding:20px;}.pl20{padding-left:20px;}.pt20{padding-top:20px;}.pr20{padding-right:20px;}.pb20{padding-bottom:20px;}
+.rel{position:relative;}.abs{position:absolute;}.fixed{position:fixed;}
+.dn{display:none;}.db{display:block;}.dib{-moz-inline-stack:inline-block; display:inline-block;}.di{display:inline;}
+.ovh{overflow:hidden;}.ovs{overflow:scroll;}.vh{visibility:hidden;}.vv{visibility:visible;}
+.lh14{line-height:14px;}.lh16{line-height:16px;}.lh18{line-height:18px;}.lh20{line-height:20px;}.lh22{line-height:22px;}.lh24{line-height:24px;}
+.fix{*zoom:1;}.fix:after,.fix:before{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}.z{_zoom:1;}
+.cb{clear:both;}
+.hidden{position:absolute;visibility:hidden;}
+.ie6fixed {_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));}
+.ie6m0{*margin-left:0;}
+.indent9999{text-indent:-9999px;}
+.input_align{vertical-align:-3px;}/*单选框 复选框文字对齐*/
+/*website css*/
+/*
+①网站常见颜色，尤其是链接色
+②网站常见背景色（我习惯用bg+颜色前2字母表示，例如.bgf7表示background:#f7f7f7;）
+③网站常见边框色，这里类似于CSS 通用库中的margin属性，需拆分，例如.bbdd表示border-bottom:1px solid #ddd;每人的命名习惯不一样，但是尽量简单为好，甚至您可以像Google一样，直接两个字母（大小写混搭）表示。另外，一定要告知设计师，边框取色不宜多，不能凭感觉，要有所牺牲，也就是如果之前使用了#cecece的边框色，后面的即使使用#d0d0d0更好看，请使用#cecece代替，这就是团队协作。
+④网站遗留的单margin属性，例如，某一div留白较大，有个单独的margin-top:35px的属性，ok，这个属性请放在网站CSS样式库中，以.mt35{margin-top:35px;}保留，以供之后类似布局或需要的地方使用。
+⑤网站遗留的单padding属性，例如，双栏自适应布局时，无论是浮动自适应，还是绝对定位自适应，都需要使用padding-left值，此时的padding-left多单样式，可抽取出来，以网站样式库的形式存在。记住，是单属性，且不可从通用元素中抽取单独的padding值，否则是给自己挖火坑。
+⑥网站遗留的width属性，在流体布局思想下，宽度是有限的，是珍贵的，需好好利用。
+⑦网站常用的一些height属性，指一些高度值，例如height:18px; height:20px; height:24px; height:50px; height:100px; height:200px;等
+网站通用的元素（按钮，导航，选项卡的）的样式千万不能分离作为网站的CSS样式库
+*/
+i{display:inline-block;}
+.orange1{color:#E95514;}.orange2{color:#F7B52D;}.orange3{color:#F7C82D;}.orange4{color:#FFA200;}.orange5{color:#FF6600;}.orange6{color:#FF6F22;}.orange7{color:#F7C82D;}.orange8{color:#FF7C00;}.orange9{color:#F29700;}.orange10{color:#FACB2D;}
+.gray1{color:#B4B4B5;}.gray2{color:#9E9F9F;}.gray3{color:#727171;}.gray4{color:#888888;}.gray5{color:#333;}.gray6{color:#595757;}.gray7{color:#B5B5B6;}.gray8{color:#898989;}.gray9{color:#9FA0A0;}
+.black1{color:#231815}
+.brown1{color:#6D380C}
+.blue1{color:#5C87B4;}
+.red1{color:#E74388}.red2{color:#E94A2B}.red3{color:#F22A2A}.red4{color:#8E00BF}.red5{color:#911717}
+.green1{color:#A4BC00;}.green2{color:#005F5A;}
+.purple1{color:#67007F;}
+.bgdc{background-color:#DCDCDC;}
+.bb9e{border-bottom:1px solid #9E9F9F;}
+.h25{height:25px;}.h26{height:26px;}.h30{height:30px;}.h35{height:35px;}.h40{height:40px;}.h45{height:45px;}.h50{height:50px;}.h55{height:55px;}.h60{height:60px;}.h65{height:65px;}.h70{height:70px;}.h75{height:75px;}.h90{height:90px;}.h94{height:94px;}.h100{height:100px;}.h110{height:110px;}.h113{height:113px;}.h120{height:120px;}.h125{height:125px;}.h150{height:150px;}.h220{height:220px;}.h295{height:295px}.h300{height:300px;}.h320{height:320px;}.h360{height:360px;}.h415{height:415px;}.h420{height:420px;}.h448{height:448px;}.h450{height:450px;}.h495{height:495px;}
+.lh23{line-height:23px;}.lh25{line-height:25px;}.lh30{line-height:30px;}.lh32{line-height:32px;}.lh35{line-height:35px;}.lh40{line-height:40px;}.lh60{line-height:60px;}.lh70{line-height:70px;}.lh90{line-height:90px;}.lh110{line-height:110px;}
+.p1em{padding:1em;}
+.pl15{padding-left:15px;}.pl16{padding-left:16px;}.pl25{padding-left:25px;}.pl30{padding-left:30px;}.pl35{padding-left:35px;}.pl40{padding-left:40px;}.pl45{padding-left:45px;}.pl50{padding-left:50px;}.pl80{padding-left:80px;}
+.pr15{padding-right:15px;}.pr16{padding-right:16px;}.pr25{padding-right:25px;}.pr30{padding-right:30px;}.pr40{padding-right:40px;}.pr45{padding-right:45px;}.pr50{padding-right:50px;}
+.pb15{padding-bottom:15px;}.pb30{padding-bottom:30px;}
+.pt9{padding-top:9px;}.pt15{padding-top:15px;}.pt30{padding-top:30px;}.pt35{padding-top:35px;}.pt45{padding-top:45px;}
+.mc{margin:0 auto;}
+.ml4{margin-left:4px;}.ml15{margin-left:15px}.ml25{margin-left:25px}.ml30{margin-left:30px}.ml50{margin-left:50px}.ml60{margin-left:60px}.ml70{margin-left:70px}.ml75{margin-left:75px}.ml120{margin-left:120px}.ml160{margin-left:160px}.ml170{margin-left:170px}.ml190{margin-left:190px}.ml230{margin-left:230px}
+.mt3{margin-top:3px;}.mt4{margin-top:4px;}.mt5{margin-top:5px;}.mt6{margin-top:6px;}.mt7{margin-top:7px;}.mt13{margin-top:13px;}.mt15{margin-top:15px;}.mt18{margin-top:18px;}.mt20{margin-top:20px;}.mt28{margin-top:28px;}.mt30{margin-top:30px;}.mt35{margin-top:35px;}
+.mr4{margin-right:4px}.mr15{margin-right:15px}.mr25{margin-right:25px}.mr30{margin-right:30px}.mr50{margin-right:50px}.mr60{margin-right:60px}.mr80{margin-right:80px}.mr90{margin-right:90px}
+.mb5{margin-bottom:5px}.mb15{margin-bottom:15px}.mb30{margin-bottom:30px}
+.a_orange1{text-decoration:none;}a.a_orange1:hover{color:#E95514}
+.a_orange2{text-decoration:none;}a.a_orange2:hover{color:#6D380C}
+.brno{background-repeat:no-repeat;}
+.border_orange1{border:1px solid #F29700;}.border_orange2{border:1px solid #F7B52D;}.border_orange3{border:1px solid #FF7C00;}.border_orange4{border:1px solid #F7C82D;}
+.border0{border:0;}.border_left0{border-left:0;}
+.zindex1{z-index:1;}.zindex2{z-index:2;}.zindex10{z-index:10;}
+.interception{white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+.nowrap{white-space:nowrap;}
+.pointer{cursor:pointer;}
+/*website icon*/
+/*
+依次命名为：u00,u01,u02…u019,u10,u11,…u119…。这种命名的好处是不用关心到底哪个位置是那个图标，不用担心命名冲突，在小图标位置以及内容更换的情况下也无需重命名
+*/
+
+/*website independent element*/
+/*
+导航，菜单，按钮，选项卡，文本框装饰，图片装饰，圆角处理等等
+*/
+
+/*website public structure*/
+/*
+指的是最外框div的样式，一般限制网站的宽度(960~990不等)，还有就是网站的分栏布局样式，这里的样式仅仅针对主体结构，例如left_part，或是right_part；还包括网站的头部的一些公用结构，底部的样式结构等
+公共结构仅仅定宽定高，设置浮动属性，切不可在结构样式上添加margin或是padding属性，这会使网站的公共结构的重用性大大降低！
+*/
+.w1080{width:1080px;}
+.w1200{width:1200px;}
+.w30{width:30px;}
+.w48{width:48px;}
+.w50{width:50px;}
+.w60{width:60px;}
+.w70{width:70px;}
+.w75{width:75px;}
+.w100{width:100px}
+.w140{width:140px}
+.w160{width:160px}
+.w170{width:170px}
+.w180{width:180px}
+.w190{width:190px}
+.w200{width:200px}
+.w210{width:210px}
+.w245{width:245px}
+.w250{width:250px}
+.w290{width:290px}
+.w300{width:300px}
+.w310{width:310px}
+.w315{width:315px}
+.w330{width:330px}
+.w370{width:370px}
+.w400{width:400px}
+.w415{width:415px}
+.w480{width:480px}
+.w490{width:490px}
+.w520{width:520px}
+.w640{width:640px}
+.w660{width:660px}
+.w700{width:700px}
+.w750{width:750px}
+.w790{width:790px}
+.w890{width:890px}
+.wperfect{width:100%}
+/*single page fine structure*/

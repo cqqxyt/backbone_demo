@@ -1,0 +1,1 @@
+define(["adminIndexView"],function(e){var t=function(){e.setKeyWordDialogShow()};return{initialize:t}});

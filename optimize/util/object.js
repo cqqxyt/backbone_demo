@@ -1,0 +1,1 @@
+define([],function(){var e={};return e.exist=function(e){return e.length>=1?!0:!1},e});

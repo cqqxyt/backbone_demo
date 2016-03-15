@@ -1,0 +1,1 @@
+define(["adminKeywordListView","adminKeywordListModel"],function(e,t){var n=function(){var n=new t,r=new e({model:n})};return{initialize:n}});

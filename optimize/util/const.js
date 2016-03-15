@@ -1,0 +1,1 @@
+define([],function(){var e={domain:"http://"+window.location.host+"/",area_cookie:"area",shortCutUser:"ajax/ajaxUser.php",indexSignup:"ajax/ajaxSignup.php",playSignupUrl:"signup.php",forumUrl:"ajax/ajaxForum.php",loginUrl:"login/userLogin.aspx",adminKeywordUrl:"admin/keyword/list.html",adminAjaxKeywordUrl:"ajax/ajaxKeyword.php",template:"templates/"};return e});
